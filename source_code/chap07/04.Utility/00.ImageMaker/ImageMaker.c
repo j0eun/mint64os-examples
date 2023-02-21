@@ -10,12 +10,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <io.h>
+#include <sys/io.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <errno.h>
 
 #define BYTESOFSECTOR  512
+#ifndef O_BINARY
+    #define O_BINARY 0
+#endif
+#ifndef S_IREAD
+    #define S_IREAD 0x400
+#endif
+#ifndef S_IWRITE
+    #define S_IWRITE 0x200
+#endif
 
 // 함수 선언
 int AdjustInSectorSize( int iFd, int iSourceSize );
