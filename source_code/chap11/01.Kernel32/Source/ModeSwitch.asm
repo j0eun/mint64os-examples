@@ -1,9 +1,3 @@
-# file      ModeSwitch.asm
-# date      2009/01/01
-# author    kkamagui 
-#           Copyright(c)2008 All rights reserved by kkamagui
-# brief     모드 전환에 관련된 소스 파일
-
 [BITS 32]               ; 이하의 코드는 32비트 코드로 설정
 
 ; C 언어에서 호출할 수 있도록 이름을 노출함(Export)
